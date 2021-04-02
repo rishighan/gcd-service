@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize');
+
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('gcd_feature_logo_2_feature', {
     id: {

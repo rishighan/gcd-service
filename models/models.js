@@ -1,20 +1,16 @@
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('gcd_membership_type', {
+  return sequelize.define('models', {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
-    },
-    type: {
-      type: DataTypes.STRING(100),
-      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'gcd_membership_type',
-    timestamps: false,
+    tableName: 'models',
+    timestamps: true,
     indexes: [
       {
         name: "PRIMARY",

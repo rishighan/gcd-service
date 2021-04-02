@@ -30,7 +30,8 @@
     "moleculer-web": "^0.9.0",
     "mysql2": "^2.2.5",
     "nats": "^1.4.12",
-    "sequelize": "^5.22.4"
+    "sequelize": "^6.6.2",
+    "sequelize-auto": "^0.8.2"
   },
   "engines": {
     "node": ">= 10.x.x"

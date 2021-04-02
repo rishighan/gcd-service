@@ -1,4 +1,4 @@
-const Sequelize = require('sequelize');
+
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define('gcd_non_comic_work_role', {
     id: {

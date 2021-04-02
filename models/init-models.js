@@ -52,6 +52,7 @@ var _gcd_story_credit = require("./gcd_story_credit");
 var _gcd_story_feature_logo = require("./gcd_story_feature_logo");
 var _gcd_story_feature_object = require("./gcd_story_feature_object");
 var _gcd_story_type = require("./gcd_story_type");
+var _models = require("./models");
 var _stddata_country = require("./stddata_country");
 var _stddata_date = require("./stddata_date");
 var _stddata_language = require("./stddata_language");
@@ -113,6 +114,7 @@ function initModels(sequelize) {
   var gcd_story_feature_logo = _gcd_story_feature_logo(sequelize, DataTypes);
   var gcd_story_feature_object = _gcd_story_feature_object(sequelize, DataTypes);
   var gcd_story_type = _gcd_story_type(sequelize, DataTypes);
+  var models = _models(sequelize, DataTypes);
   var stddata_country = _stddata_country(sequelize, DataTypes);
   var stddata_date = _stddata_date(sequelize, DataTypes);
   var stddata_language = _stddata_language(sequelize, DataTypes);
@@ -349,6 +351,7 @@ function initModels(sequelize) {
     gcd_story_feature_logo,
     gcd_story_feature_object,
     gcd_story_type,
+    models,
     stddata_country,
     stddata_date,
     stddata_language,

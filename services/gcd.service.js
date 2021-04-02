@@ -1,16 +1,30 @@
 "use strict";
-
-const SequelizeAdapter = require("../db/sequelize.adapter");
 const Sequelize = require("sequelize");
+const SequelizeAdapter = require("moleculer-db-adapter-sequelize");
+const DBService = require("moleculer-db");
 const op = Sequelize.Op;
-const gcdIssue = require("../models/gcd_issue");
+
+const DbAdapter = new SequelizeAdapter("gcd", "root", "Titu@1588", {
+	host: "localhost",
+	dialect: "mysql",
+	pool: {
+		max: 5,
+		min: 0,
+		idle: 10000,
+	},
+});
+const sequelize = new Sequelize("gcd", "root", "Titu@1588", {
+	host: "localhost",
+	dialect: "mysql",
+});
+const initModels = require("../models/init-models");
+const models = initModels(sequelize);
 
 module.exports = {
 	name: "gcd",
-	adapter: new SequelizeAdapter(
-		"mysql://root:Titu@1588@127.0.0.1/grandcomicsdatabase"
-	),
-	model: gcdIssue,
+	adapter: DbAdapter,
+	model: models.gcd_issue,
+	mixins: [DBService],
 	version: 1,
 	settings: {},
 	actions: {
