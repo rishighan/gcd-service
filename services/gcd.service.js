@@ -4,7 +4,7 @@ const SequelizeAdapter = require("moleculer-db-adapter-sequelize");
 const DBService = require("moleculer-db");
 const op = Sequelize.Op;
 
-const DbAdapter = new SequelizeAdapter("gcd", "root", "Titu@1588", {
+const DbAdapter = new SequelizeAdapter("grandcomicsdatabase", "root", "Titu@1588", {
 	host: "localhost",
 	dialect: "mysql",
 	pool: {
@@ -13,7 +13,7 @@ const DbAdapter = new SequelizeAdapter("gcd", "root", "Titu@1588", {
 		idle: 10000,
 	},
 });
-const sequelize = new Sequelize("gcd", "root", "Titu@1588", {
+const sequelize = new Sequelize("grandcomicsdatabase", "root", "Titu@1588", {
 	host: "localhost",
 	dialect: "mysql",
 });
